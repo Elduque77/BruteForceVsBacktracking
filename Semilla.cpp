@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-//HOLA MUNDO
+
 int main() {
     // 1. Ingrese la cadena con los apellidos unidos en orden alfabético
     std::string apellidos = "duquegallegohenaomejia"; // <-- Reemplaza con los apellidos de tu equipo
