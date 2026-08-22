@@ -1,0 +1,9 @@
+Cadena de apellidos: duquegallegohenaomejia
+Suma ASCII: 2320
+Semilla generada: 2320
+
+Contrasena 1 (n=4, Alfabeto=A1): tynm
+Contrasena 2 (n=4, Alfabeto=A2): nk12
+Contrasena 3 (n=5, Alfabeto=A1): jebkb
+Contrasena 4 (n=5, Alfabeto=A2): sxa38
+Contrasena 5 (n=6, Alfabeto=A1): bojwtm
