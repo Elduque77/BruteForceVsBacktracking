@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "src/third_party/picosha2.h"
 
 int main() {
-    // 1. Ingrese la cadena con los apellidos unidos en orden alfabético
-    std::string apellidos = "duquegallegohenaomejia"; // <-- Reemplaza con los apellidos de tu equipo
+    // Aqui defino la cadena de los apellidos en orden
+    std::string apellidos = "duquegallegohenaomejia";
     
-    // 2. Cálculo de la semilla
+    // Aqui llevo a cabo el Cálculo de la semilla
     long long suma_ascii = 0;
     for (char c : apellidos) {
         suma_ascii += static_cast<int>(c);
@@ -16,17 +17,18 @@ int main() {
     std::cout << "Suma ASCII: " << suma_ascii << std::endl;
     std::cout << "Semilla generada: " << semilla << std::endl << std::endl;
 
-    // Defino alfabetos
+    // Aqui defino los dos alfabetos que utilizaremos
     std::string A1 = "abcdefghijklmnopqrstuvwxyz";
     std::string A2 = "abcdefghijklmnopqrstuvwxyz0123456789";
 
-    // Configuración de las 5 contraseñas (Longitud y Alfabeto)
+    // Aqui defino las variables de configuración para las contraseñas
     struct Config {
         int longitud;
         std::string alfabeto;
         std::string nombre_alfabeto;
     };
 
+    // Aqui defini las longitudes que van a tener las contraseñas dependiendo del alfabeto que se utilice
     std::vector<Config> configs = {
         {4, A1, "A1"},
         {4, A2, "A2"},
@@ -35,7 +37,7 @@ int main() {
         {6, A1, "A1"}
     };
 
-    // 3. Generador Congruencial Lineal (LCG)
+    // Aqui defini el generador congruencial final para generar las contraseñas
     long long xi = semilla;
     const long long m = 2147483648LL; // 2^31
 
@@ -48,6 +50,12 @@ int main() {
         }
         std::cout << "Contrasena " << (k + 1) << " (n=" << configs[k].longitud 
                   << ", Alfabeto=" << configs[k].nombre_alfabeto << "): " << pwd << std::endl;
+
+        // Aqui calculo el hash SHA-256 de la contraseña generada            
+        std::string hash_sha256 = picosha2::hash256_hex_string(pwd);
+
+        std::cout << "  Hash SHA-256: " << hash_sha256 << std::endl << std::endl;
+
     }
 
     return 0;
