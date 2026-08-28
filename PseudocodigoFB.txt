@@ -1,0 +1,38 @@
+Procedimiento ResolverFuerzaBruta(H_obj, Σ, n)
+    candidatosEvaluados ← 0
+    solucionEncontrada ← NULO
+    
+    // Llamada inicial con la cadena vacía
+    ExhaustivoRecursivo("", n, Σ, H_obj, solucionEncontrada, candidatosEvaluados)
+    
+    Si solucionEncontrada ≠ NULO Entonces
+        Retornar solucionEncontrada
+    Sino
+        Retornar ⊥
+    FinSi
+FinProcedimiento
+
+Procedimiento ExhaustivoRecursivo(cadenaActual, n, Σ, H_obj, Ref solucion, Ref evaluados)
+    // Caso Base: Cadena del tamaño objetivo
+    Si Longitud(cadenaActual) = n Entonces
+        evaluados ← evaluados + 1
+        
+        Si CalcularSHA256(cadenaActual) = H_obj Entonces
+            solucion ← cadenaActual
+            Retornar VERDADERO  // Se corta la búsqueda inmediatamente
+        FinSi
+        
+        Retornar FALSO
+    FinSi
+
+    // Paso Recursivo: Extensión por cada símbolo del alfabeto
+    Para Cada caracter c En Σ Hacer
+        Exito ← ExhaustivoRecursivo(cadenaActual + c, n, Σ, H_obj, solucion, evaluados)
+        
+        Si Exito = VERDADERO Entonces
+            Retornar VERDADERO  // Propaga la parada hacia arriba en la pila
+        FinSi
+    FinPara
+
+    Retornar FALSO
+FinProcedimiento
