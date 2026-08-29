@@ -16,3 +16,6 @@ Contrasena 4 (n=5, Alfabeto=A2): z8hin
 
 Contrasena 5 (n=6, Alfabeto=A1): tynmte
   Hash SHA-256: cf616a632b59ea488a6bee1b24749a83018d57807f4c09b4bad88272a0fc023b
+
+
+  
