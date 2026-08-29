@@ -69,11 +69,11 @@ int main() {
 
     // Lista de las 5 instancias sintéticas generadas con la semilla del grupo (2320)
     std::vector<Instancia> instancias = {
-        {1, 4, A1, "A1", "34ef425a850e0ebaa20f3214da3f82522858cdbe6cfd93fef8c72cf282ae5527"},
-        {2, 4, A2, "A2", "e0fb144079ca963cfa3aa8c9ee4ea09be282f67645eb4efd6cf3017cfbf6ad38"},
-        {3, 5, A1, "A1", "8cd6804ff2b0bbff9ef347c6a9bb7bb6bb088bead3fec9536fa2a1ef24a10ee9"},
-        {4, 5, A2, "A2", "0f207c305a0808c50273c7f4df90b5cfa934544a25b7faccf8203c3b83ab26f8"},
-        {5, 6, A1, "A1", "29f086beca586851fce207aab47831ded226751a0c7317b7dc5433e4774c73dd"}
+        {1, 4, A1, "A1", "cd1874ea9fc4124aaff12e67c1a63d1ca1026b7ff0fa8233de38f2136dd856d7"},
+        {2, 4, A2, "A2", "ca53174dd43dfeef5f6fcfbc0dc581221c7bcde985dc12eb2587cc325d4d0d45"},
+        {3, 5, A1, "A1", "642727eb47a75fb412674579ddb4dda9f0e955b0cae3e8bddd7a328711344b61"},
+        {4, 5, A2, "A2", "45de79e862967e4cd518ceb85ff70cead32426b4fc2e87939df1e07a45c38671"},
+        {5, 6, A1, "A1", "cf616a632b59ea488a6bee1b24749a83018d57807f4c09b4bad88272a0fc023b"}
     };
 
     std::cout << "======================================================================\n";

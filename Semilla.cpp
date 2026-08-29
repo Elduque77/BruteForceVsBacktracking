@@ -42,6 +42,7 @@ int main() {
     const long long m = 2147483648LL; // 2^31
 
     for (size_t k = 0; k < configs.size(); ++k) {
+        long long xi = semilla; 
         std::string pwd = "";
         for (int i = 0; i < configs[k].longitud; ++i) {
             xi = (1103515245 * xi + 12345) % m;

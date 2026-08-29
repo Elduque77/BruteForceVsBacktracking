@@ -1,17 +1,18 @@
+Cadena de apellidos: duquegallegohenaomejia
 Suma ASCII: 2320
 Semilla generada: 2320
 
 Contrasena 1 (n=4, Alfabeto=A1): tynm
   Hash SHA-256: cd1874ea9fc4124aaff12e67c1a63d1ca1026b7ff0fa8233de38f2136dd856d7
 
-Contrasena 2 (n=4, Alfabeto=A2): nk12
-  Hash SHA-256: a8a173b732b02c51335f3361f8f74c02ce84e9d7b15b43f753ca77fae2e9c0f5
+Contrasena 2 (n=4, Alfabeto=A2): z8hi
+  Hash SHA-256: ca53174dd43dfeef5f6fcfbc0dc581221c7bcde985dc12eb2587cc325d4d0d45
 
-Contrasena 3 (n=5, Alfabeto=A1): jebkb
-  Hash SHA-256: 00370abe5d1a5833af1b9bcdb9fab249be68a272e629615b4fae8c61912e6cf0
+Contrasena 3 (n=5, Alfabeto=A1): tynmt
+  Hash SHA-256: 642727eb47a75fb412674579ddb4dda9f0e955b0cae3e8bddd7a328711344b61
 
-Contrasena 4 (n=5, Alfabeto=A2): sxa38
-  Hash SHA-256: 0f207e305a0808c50273c7f4df90b5efa934544a25b7faccf8203c3b83ab26f8
+Contrasena 4 (n=5, Alfabeto=A2): z8hin
+  Hash SHA-256: 45de79e862967e4cd518ceb85ff70cead32426b4fc2e87939df1e07a45c38671
 
-Contrasena 5 (n=6, Alfabeto=A1): bojwtm
-  Hash SHA-256: 29f086beca586851fce207aab47831ded226751a0c7317b7dc5433e4774c73dd
+Contrasena 5 (n=6, Alfabeto=A1): tynmte
+  Hash SHA-256: cf616a632b59ea488a6bee1b24749a83018d57807f4c09b4bad88272a0fc023b
