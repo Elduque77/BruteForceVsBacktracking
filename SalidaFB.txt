@@ -1,0 +1,45 @@
+======================================================================
+
+          EJECUCION DEL MODULO DE FUERZA BRUTA (FB)                   
+
+======================================================================
+
+--> Evaluando Instancia 1 (n=4, Alfabeto=A1)...
+
+  [EXITO] Contrasena Encontrada: tynm
+  Candidatos Evaluados : 350519
+  Tiempo Transcurrido  : 1310.45 ms
+
+----------------------------------------------------------------------
+
+--> Evaluando Instancia 2 (n=4, Alfabeto=A2)...
+
+  [EXITO] Contrasena Encontrada: z8hi
+  Candidatos Evaluados : 1210725
+  Tiempo Transcurrido  : 4536.75 ms
+
+----------------------------------------------------------------------
+
+--> Evaluando Instancia 3 (n=5, Alfabeto=A1)...
+
+  [EXITO] Contrasena Encontrada: tynmt
+  Candidatos Evaluados : 9113488
+  Tiempo Transcurrido  : 37114.8 ms
+
+----------------------------------------------------------------------
+
+--> Evaluando Instancia 4 (n=5, Alfabeto=A2)...
+
+  [EXITO] Contrasena Encontrada: z8hin
+  Candidatos Evaluados : 43586078
+  Tiempo Transcurrido  : 193651 ms
+
+----------------------------------------------------------------------
+
+--> Evaluando Instancia 5 (n=6, Alfabeto=A1)...
+
+  [EXITO] Contrasena Encontrada: tynmte
+  Candidatos Evaluados : 236950667
+  Tiempo Transcurrido  : 2.72343e+06 ms
+
+---------------------------------------------------------------------- 
