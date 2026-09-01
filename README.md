@@ -24,3 +24,20 @@ Las contraseñas de prueba fueron generadas determinísticamente utilizando la s
 * **Medición de Tiempo:** `std::chrono::high_resolution_clock`
 
 ---
+
+##  Compilación y Ejecución
+Para compilar y ejecutar los módulos con optimización activada, utiliza la terminal de comandos:
+
+# 1. Compilar el módulo de Fuerza Bruta
+g++ -std=c++17 -O2 FuerzaBruta.cpp -o FuerzaBruta.exe
+
+# 2. Ejecutar Fuerza Bruta
+.\FuerzaBruta.exe
+
+---
+
+# 3. Compilar el módulo de Backtracking
+g++ -std=c++17 -O2 Backtracking.cpp -o Backtracking.exe
+
+# 4. Ejecutar Backtracking
+.\Backtracking.exe
