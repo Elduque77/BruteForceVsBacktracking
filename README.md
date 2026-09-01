@@ -19,23 +19,22 @@ Las contraseñas de prueba fueron generadas determinísticamente utilizando la s
 
 * **Lenguaje de Programación:** C++17
 * **Compilador:** `g++` (GCC bajo MSYS2 / UCRT64)
-* **Banderas de Optimización:** `-O2`
 * **Biblioteca Hash:** `picosha2.h` (*Header-only implementation* para SHA-256)
 * **Medición de Tiempo:** `std::chrono::high_resolution_clock`
 
 ---
 
 ##  Compilación y Ejecución
-Para compilar y ejecutar los módulos con optimización activada, utiliza la terminal de comandos:
+Para compilar y ejecutar los módulos, utiliza la terminal de comandos:
 
 **1. Compilar el módulo de Fuerza Bruta**
-g++ -std=c++17 -O2 FuerzaBruta.cpp -o FuerzaBruta.exe
+g++ -std=c++17 FuerzaBruta.cpp -o FuerzaBruta.exe
 
 **2. Ejecutar Fuerza Bruta**
 .\FuerzaBruta.exe
 
 **3. Compilar el módulo de Backtracking**
-g++ -std=c++17 -O2 Backtracking.cpp -o Backtracking.exe
+g++ -std=c++17 Backtracking.cpp -o Backtracking.exe
 
 **4. Ejecutar Backtracking**
 .\Backtracking.exe
