@@ -6,7 +6,7 @@ Este repositorio contiene la implementación, validación empírica y análisis 
 
 ##  Descripción del Proyecto
 
-El proyecto explora la resistencia de esquemas de autenticación basados en funciones de dispersión unidireccionales ($SHA-256$). A partir de un conjunto de instancias sintéticas de prueba generadas secuencialmente con un Generador Congruencial Lineal (LCG), se evalúa cómo el incremento en la longitud de la clave ($n$) y la expansión del tamaño del alfabeto ($\Sigma$) impactan el tiempo de cómputo y el espacio de búsqueda.
+El proyecto explora la resistencia de esquemas de autenticación basados en funciones de dispersión unidireccionales ($SHA-256$). A partir de un conjunto de instancias sintéticas de prueba generadas secuencialmente con un Generador Congruencial Lineal (LCG), se evalúa cómo el incremento en la longitud de la clave ($n$) y la expansión del tamaño del alfabeto (|A|) impactan el tiempo de cómputo y el espacio de búsqueda.
 
 ###  Generación de Instancias Sintéticas
 Las contraseñas de prueba fueron generadas determinísticamente utilizando la semilla $2320$ (derivada de la suma de códigos ASCII del grupo de trabajo) y los siguientes conjuntos de caracteres:
