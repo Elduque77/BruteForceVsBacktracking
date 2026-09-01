@@ -1,9 +1,9 @@
-Procedimiento ResolverFuerzaBruta(H_obj, Σ, n)
+Procedimiento ResolverFuerzaBruta(H_obj, A, n) 
     candidatosEvaluados ← 0
     solucionEncontrada ← NULO
     
     // Llamada inicial con la cadena vacía
-    ExhaustivoRecursivo("", n, Σ, H_obj, solucionEncontrada, candidatosEvaluados)
+    ExhaustivoRecursivo("", n, A, H_obj, solucionEncontrada, candidatosEvaluados)
     
     Si solucionEncontrada ≠ NULO Entonces
         Retornar solucionEncontrada
@@ -12,7 +12,7 @@ Procedimiento ResolverFuerzaBruta(H_obj, Σ, n)
     FinSi
 FinProcedimiento
 
-Procedimiento ExhaustivoRecursivo(cadenaActual, n, Σ, H_obj, Ref solucion, Ref evaluados)
+Procedimiento ExhaustivoRecursivo(cadenaActual, n, A, H_obj, Ref solucion, Ref evaluados)
     // Caso Base: Cadena del tamaño objetivo
     Si Longitud(cadenaActual) = n Entonces
         evaluados ← evaluados + 1
@@ -26,8 +26,8 @@ Procedimiento ExhaustivoRecursivo(cadenaActual, n, Σ, H_obj, Ref solucion, Ref 
     FinSi
 
     // Paso Recursivo: Extensión por cada símbolo del alfabeto
-    Para Cada caracter c En Σ Hacer
-        Exito ← ExhaustivoRecursivo(cadenaActual + c, n, Σ, H_obj, solucion, evaluados)
+    Para Cada caracter c En A Hacer
+        Exito ← ExhaustivoRecursivo(cadenaActual + c, n, A, H_obj, solucion, evaluados)
         
         Si Exito = VERDADERO Entonces
             Retornar VERDADERO  // Propaga la parada hacia arriba en la pila
