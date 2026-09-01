@@ -12,7 +12,7 @@ El proyecto explora la resistencia de esquemas de autenticación basados en func
 Las contraseñas de prueba fueron generadas determinísticamente utilizando la semilla $2320$ (derivada de la suma de códigos ASCII del grupo de trabajo) y los siguientes conjuntos de caracteres:
 * **Alfabeto A1 (|A| = 26$):** Letras minúsculas del alfabeto inglés (`a-z`).
 * **Alfabeto A2 (|A| = 36$):** Letras minúsculas y dígitos numéricos (`a-z`, `0-9`).
-* **Alfabeto A3 (|A| = 36$):** Letras minúsculas, mayúsculas, simbolos y dígitos numéricos (`a-z`, `0-9`, {!, @, #, $, %}).
+* **Alfabeto A3 (|A| = 69$):** Letras minúsculas, mayúsculas, simbolos y dígitos numéricos (`a-z`, `0-9`, {!, @, #, $, %}).
 ---
 
 ##  Tecnologías y Requisitos
