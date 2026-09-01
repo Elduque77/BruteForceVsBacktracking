@@ -1,0 +1,73 @@
+ALGORITMO BacktrackingPoliticaContrasenas
+
+CONSTANTES:
+    ALFABETO = minusculas(26) + mayusculas(26) + digitos(10) + simbolos(5)  // 67 en total
+
+ENTRADA:
+    n              // longitud de la contraseña
+    minLower, minUpper, minDigit, minSymbol   // mínimos exigidos por la política
+    noRepetirConsecutivos = verdadero
+
+VARIABLES GLOBALES (métricas y estado):
+    prefijo = cadena vacía
+    counts[4] = [0, 0, 0, 0]     // conteo acumulado por categoría en el prefijo actual
+    nodosVisitados = 0
+    hojasAlcanzadas = 0
+    podadasPorPolitica = 0
+    saltadasPorConsecutivo = 0
+    solucionesEncontradas = 0
+    ejemplo = ninguno
+
+FUNCION categoriaDe(caracter c) -> {MINUSCULA, MAYUSCULA, DIGITO, SIMBOLO}
+    retorna la categoría correspondiente a c
+
+FUNCION ESFACTIBLE(pos, counts):
+    restantes = n - pos
+    faltanLower  = max(0, minLower  - counts[MINUSCULA])
+    faltanUpper  = max(0, minUpper  - counts[MAYUSCULA])
+    faltanDigit  = max(0, minDigit  - counts[DIGITO])
+    faltanSymbol = max(0, minSymbol - counts[SIMBOLO])
+    faltanTotal  = faltanLower + faltanUpper + faltanDigit + faltanSymbol
+    retorna (faltanTotal <= restantes)   // si es falso -> PODA
+
+PROCEDIMIENTO BACKTRACK(pos, ultimoCaracter):
+    nodosVisitados = nodosVisitados + 1
+
+    SI pos == n ENTONCES                          // caso base: prefijo completo
+        hojasAlcanzadas = hojasAlcanzadas + 1
+        SI counts[MINUSCULA] >= minLower Y
+           counts[MAYUSCULA] >= minUpper Y
+           counts[DIGITO]    >= minDigit Y
+           counts[SIMBOLO]   >= minSymbol ENTONCES
+            solucionesEncontradas = solucionesEncontradas + 1
+            SI ejemplo == ninguno ENTONCES
+                ejemplo = prefijo
+        RETORNAR
+
+    SI NO ESFACTIBLE(pos, counts) ENTONCES         // condición de poda
+        podadasPorPolitica = podadasPorPolitica + 1
+        RETORNAR                                    // se abandona la rama SIN generar hijos
+
+    PARA CADA caracter c EN ALFABETO HACER
+        SI noRepetirConsecutivos Y c == ultimoCaracter ENTONCES
+            saltadasPorConsecutivo = saltadasPorConsecutivo + 1
+            CONTINUAR                                // no se genera esta rama
+
+        cat = categoriaDe(c)
+        counts[cat] = counts[cat] + 1                // construir
+        prefijo = prefijo + c
+
+        BACKTRACK(pos + 1, c)                        // recursión (extender)
+
+        prefijo = prefijo sin el ultimo caracter      // deshacer (retroceso)
+        counts[cat] = counts[cat] - 1
+
+PROCEDIMIENTO PRINCIPAL:
+    leer n, minLower, minUpper, minDigit, minSymbol
+    counts = [0,0,0,0]
+    prefijo = ""
+    BACKTRACK(0, caracter_nulo)
+    imprimir nodosVisitados, hojasAlcanzadas, podadasPorPolitica,
+             saltadasPorConsecutivo, solucionesEncontradas, ejemplo
+    calcular tamanoTeorico = |ALFABETO| ^ n
+    calcular reduccion = 100 * (1 - nodosVisitados / tamanoTeorico)
